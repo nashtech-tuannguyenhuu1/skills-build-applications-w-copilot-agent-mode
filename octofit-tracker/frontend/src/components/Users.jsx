@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
-import { API_BASE_URL, toArray } from '../api'
+import { toArray } from '../api'
+
+const USERS_API_URL = import.meta.env.VITE_CODESPACE_NAME
+  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/users`
+  : 'http://localhost:8000/api/users'
 
 export default function Users() {
   const [users, setUsers] = useState([])
@@ -7,7 +11,7 @@ export default function Users() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch(`${API_BASE_URL}/api/users`)
+    fetch(USERS_API_URL)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`)
         return r.json()
