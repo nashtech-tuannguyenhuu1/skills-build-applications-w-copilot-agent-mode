@@ -27,63 +27,63 @@ app.get('/api/health', (_req: Request, res: Response) => {
 });
 
 // Users endpoints
-app.get('/api/users/', (_req: Request, res: Response) => {
+app.get('/api/users', (_req: Request, res: Response) => {
   res.status(200).json({
     message: 'Get all users',
-    endpoint: '/api/users/',
+    endpoint: '/api/users',
   });
 });
 
-app.post('/api/users/', (_req: Request, res: Response) => {
+app.post('/api/users', (_req: Request, res: Response) => {
   res.status(201).json({
     message: 'Create new user',
-    endpoint: '/api/users/',
+    endpoint: '/api/users',
   });
 });
 
 // Teams endpoints
-app.get('/api/teams/', (_req: Request, res: Response) => {
+app.get('/api/teams', (_req: Request, res: Response) => {
   res.status(200).json({
     message: 'Get all teams',
-    endpoint: '/api/teams/',
+    endpoint: '/api/teams',
   });
 });
 
-app.post('/api/teams/', (_req: Request, res: Response) => {
+app.post('/api/teams', (_req: Request, res: Response) => {
   res.status(201).json({
     message: 'Create new team',
-    endpoint: '/api/teams/',
+    endpoint: '/api/teams',
   });
 });
 
 // Activities endpoints
-app.get('/api/activities/', (_req: Request, res: Response) => {
+app.get('/api/activities', (_req: Request, res: Response) => {
   res.status(200).json({
     message: 'Get all activities',
-    endpoint: '/api/activities/',
+    endpoint: '/api/activities',
   });
 });
 
-app.post('/api/activities/', (_req: Request, res: Response) => {
+app.post('/api/activities', (_req: Request, res: Response) => {
   res.status(201).json({
     message: 'Log new activity',
-    endpoint: '/api/activities/',
+    endpoint: '/api/activities',
   });
 });
 
 // Leaderboard endpoint
-app.get('/api/leaderboard/', (_req: Request, res: Response) => {
+app.get('/api/leaderboard', (_req: Request, res: Response) => {
   res.status(200).json({
     message: 'Get competitive leaderboard',
-    endpoint: '/api/leaderboard/',
+    endpoint: '/api/leaderboard',
   });
 });
 
 // Workouts endpoint
-app.get('/api/workouts/', (_req: Request, res: Response) => {
+app.get('/api/workouts', (_req: Request, res: Response) => {
   res.status(200).json({
     message: 'Get personalized workout suggestions',
-    endpoint: '/api/workouts/',
+    endpoint: '/api/workouts',
   });
 });
 
